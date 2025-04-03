@@ -24,20 +24,20 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // ✅ 设置边距适配
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // ✅ 初始化数据库
+        // Initialize database
         taskDao = TaskDatabase.getInstance(this).taskDao();
 
-        // ✅ 初始化 RecyclerView
+        // Initialize RecyclerView
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         taskAdapter = new TaskAdapter(task -> {
-            // 点击任务后进入详情页面
+            // Click on the task to enter the details page
             Intent intent = new Intent(MainActivity.this, TaskDetailActivity.class);
             intent.putExtra("taskId", task.getId());
             startActivity(intent);
@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(taskAdapter);
 
-        // ✅ 加载任务数据
+        // Load task data
         taskDao.getAllTasks().observe(this, tasks -> {
             taskAdapter.submitList(tasks);
         });
 
-        // ✅ 设置加号按钮跳转到添加任务页面
+        //  Set the plus button to jump to the Add Task page
         findViewById(R.id.fab_add_task).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AddEditTaskActivity.class);
             startActivity(intent);

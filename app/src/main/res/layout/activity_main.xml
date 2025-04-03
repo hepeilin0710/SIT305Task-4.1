@@ -6,21 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView 显示任务列表 -->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
         android:clipToPadding="false"
-        android:contentDescription="任务列表"/>
+        android:contentDescription="Task list"/>
 
-    <!-- 添加任务按钮 -->
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="添加任务"
+        android:contentDescription="Add task"
         android:src="@android:drawable/ic_input_add"
         app:layout_anchorGravity="bottom|end"
         android:layout_gravity="bottom|end"

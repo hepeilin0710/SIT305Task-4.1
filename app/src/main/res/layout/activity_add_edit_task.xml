@@ -11,7 +11,7 @@
 
         <EditText
             android:id="@+id/edit_title"
-            android:hint="任务标题"
+            android:hint="Task title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -19,7 +19,7 @@
 
         <EditText
             android:id="@+id/edit_description"
-            android:hint="任务描述"
+            android:hint="Task description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
@@ -29,7 +29,7 @@
 
         <EditText
             android:id="@+id/edit_due_date"
-            android:hint="截止日期（如：2025-04-05）"
+            android:hint="Deadline date（eg：2025-04-05）"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -38,7 +38,7 @@
 
         <Button
             android:id="@+id/button_save"
-            android:text="保存任务"
+            android:text="Save task"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp" />

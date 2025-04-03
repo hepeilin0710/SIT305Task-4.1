@@ -42,7 +42,7 @@ public class AddEditTaskActivity extends AppCompatActivity {
             String dueDate = inputDueDate.getText().toString().trim();
 
             if (title.isEmpty() || dueDate.isEmpty()) {
-                Toast.makeText(this, "标题和截止日期不能为空", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "The title and due date cannot be empty", Toast.LENGTH_SHORT).show();
                 return;
             }
 
